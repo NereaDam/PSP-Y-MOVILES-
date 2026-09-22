@@ -1,7 +1,6 @@
 
     void main()  {
 
-
         Semaphore semaphore = new Semaphore(3);
 
         Runnable tareaCoche = () -> {
@@ -22,7 +21,6 @@
             semaphore.release();
             System.out.println("Me voy");
 
-
         };
 
         for (int i = 0; i < 5; i++) {
@@ -31,8 +29,4 @@
 
         }
 
-
-
     }
-
-
