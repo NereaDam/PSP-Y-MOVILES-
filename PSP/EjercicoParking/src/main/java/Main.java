@@ -43,8 +43,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
             }
         };
-        Thread coche = new Thread(tareaCoche);
-        coche.start();
+
+        for (int i = 0; i < 5; i++) {
+            Thread coche = new Thread(tareaCoche);
+            coche.start();
+
+        }
 
 
     }
