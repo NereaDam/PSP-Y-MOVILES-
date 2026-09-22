@@ -4,17 +4,17 @@ import java.util.concurrent.locks.ReentrantLock;
 
 
 
-    void main() {
+    void main()  {
 
         ReentrantLock lock = new ReentrantLock();
         Condition condition = lock.newCondition();
-        final int[] plazasLibres = {3};
+        AtomicInteger plazasLibres =  new AtomicInteger(3);
 
         Runnable tareaCoche = () -> {
 
             if (lock.tryLock()) {
 
-                while (plazasLibres[0] == 0) {
+                while (plazasLibres.get() == 0) {
                     try {
                         condition.await();
                         System.out.println("Esperando aparcamiento");
@@ -24,17 +24,17 @@ import java.util.concurrent.locks.ReentrantLock;
 
                 }
                 System.out.println("consigo plaza");
-                plazasLibres[0]--;
+                plazasLibres.decrementAndGet();
                 lock.unlock();
                 System.out.println("aparcado");
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
 
                 lock.lock();
-                plazasLibres[0]++;
+                plazasLibres.incrementAndGet();
                 condition.signal();
                 System.out.println("Me voy");
 
@@ -48,6 +48,16 @@ import java.util.concurrent.locks.ReentrantLock;
             Thread coche = new Thread(tareaCoche);
             coche.start();
 
+        }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        for (int i = 0; i <5; i++) {
+            Thread coche = new Thread(tareaCoche);
+            coche.start();
         }
 
 
