@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">practica1</string>
+
+    <string name="titulo_examen">Examen de Android</string>
+
+    <string name="datos_alumno">1. Datos del Alumno</string>
+    <string name="nombre_Completo">Nombre completo</string>
+    <string name="correo">Correo electrónico</string>
+
+    <string name="pts">Pts</string>
+
+    <string name="respuesta_correcta">2. Selecciona la respuesta correcta</string>
+    <string name="pregunta_diseño">¿Qué componente se utiliza para crear diseños flexibles?</string>
+    <string name="opcion_linear">LinearLayout</string>
+    <string name="opcion_constraint">ConstraintLayout</string>
+    <string name="opcion_frame">FrameLayout</string>
+
+    <string name="selecciona_todas">3. Selecciona todas las que apliquen</string>
+    <string name="pregunta_arquitectura">¿Cuáles son componentes de la arquitectura Android?</string>
+    <string name="opcion_activity">Activity</string>
+    <string name="opcion_viewmodel">ViewModel</string>
+    <string name="opcion_javascript">JavaScript</string>
+    <string name="opcion_repository">Repository</string>
+
+    <string name="pregunta_desarrollo">4. Pregunta de desarrollo</string>
+    <string name="explica">Explica qué es Dependency Injection</string>
+
+    <string name="boton_enviar">Enviar Examen</string>
+
+</resources>
