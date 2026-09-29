@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamaños de texto (sp) -->
+    <dimen name="titulo">22sp</dimen>
+    <dimen name="texto_secciones">16sp</dimen>
+    <dimen name="texto_pregunta">12sp</dimen>
+    <dimen name="texto_opcion">12sp</dimen>
+    <dimen name="texto_pts">12sp</dimen>
+
+    <!-- Márgenes y medidas (dp) -->
+    <dimen name="margen_pequenio">8dp</dimen>
+    <dimen name="margen_medio">16dp</dimen>
+    <dimen name="margen_extraGrande">100dp</dimen>
+    <dimen name="ancho_pts">48dp</dimen>
+
+
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <attr name="colorAzulNeon" format="color" />
+    <attr name="colorOnAzulNeon" format="color" />
+    <attr name="colorAzulNeonContainer" format="color" />
+    <attr name="colorOnAzulNeonContainer" format="color" />
+</resources>
