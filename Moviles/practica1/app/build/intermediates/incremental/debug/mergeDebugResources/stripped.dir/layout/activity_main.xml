@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <!-- ============ GUIDELINES VERTICALES ============ -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalMedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- ============ GUIDELINES HORIZONTALES ============ -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontalDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontalCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontalSeccion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontalSeccion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontalSeccion4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHozontalBoton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <!-- ============ TÍTULO ============ -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="@color/md_theme_onBackground"
+        android:textSize="@dimen/titulo"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideHorizontalDatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ============ 1 DATOS DEL ALUMNO ============ -->
+
+    <TextView
+        android:id="@+id/tvDatosAlumno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margen_pequenio"
+        android:text="@string/datos"
+        android:textColor="@color/colorAzulNeonContainer"
+        android:textSize="@dimen/texto_secciones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tilNombre"
+        app:layout_constraintEnd_toStartOf="@id/guideVerticalMedio"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/tilNombre" />
+
+        <!--CAJITA PARA NOMBRE COMPLETO-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombre"
+        style="?attr/textInputOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalMedio"
+        app:layout_constraintTop_toTopOf="@id/guideHorizontalDatos">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+        <!--CAJITA PARA CORREO-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Correo"
+        style="?attr/textInputOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/correo"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guideHorizontalCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ============ 2 SELECCIONA LA RESPUESTA CORRECTA ============ -->
+        <!--Pts Antes del 2-->
+    <EditText
+        android:id="@+id/etPts2"
+        android:layout_width="@dimen/ancho_pts"
+        android:layout_height="wrap_content"
+        android:hint="@string/pts"
+        android:inputType="number"
+        android:textSize="@dimen/texto_pts"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guideHorizontalSeccion2" />
+        <!--TITULO PREGUNTA 2-->
+    <TextView
+        android:id="@+id/tvSeccion2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_pequenio"
+        android:text="@string/respuesta"
+        android:textColor="@color/colorAzulNeonContainer"
+        android:textSize="@dimen/texto_secciones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etPts2"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toEndOf="@id/etPts2"
+        app:layout_constraintTop_toTopOf="@id/etPts2" />
+      <!-- PREGUNTA -->
+    <TextView
+        android:id="@+id/tvPregunta2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margen_pequenio"
+        android:text="@string/pregunta_disenio"
+        android:textSize="@dimen/texto_pregunta"
+        app:layout_constraintBottom_toBottomOf="@id/rgRespuestas"
+        app:layout_constraintEnd_toStartOf="@id/guideVerticalMedio"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/rgRespuestas" />
+
+    <!-- ============ RADIOBUTTON PREGUNTA 2============ -->
+    <RadioGroup
+        android:id="@+id/rgRespuestas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_pequenio"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalMedio"
+        app:layout_constraintTop_toBottomOf="@id/etPts2">
+        <!--OPCION 1-->
+        <RadioButton
+            android:id="@+id/rbLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_linear"
+            android:textSize="@dimen/texto_opcion" />
+        <!--OPCION 2-->
+        <RadioButton
+            android:id="@+id/rbConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_constraint"
+            android:textSize="@dimen/texto_opcion" />
+        <!--OPCION 3-->
+        <RadioButton
+            android:id="@+id/rbFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/opcion_frame"
+            android:textSize="@dimen/texto_opcion" />
+    </RadioGroup>
+
+    <!-- ============ 3 SELECCIONA TODAS ALS QUE APLIQUEN ============ -->
+    <!--Pts Antes del 3-->
+    <EditText
+        android:id="@+id/etPts3"
+        android:layout_width="@dimen/ancho_pts"
+        android:layout_height="wrap_content"
+        android:hint="@string/pts"
+        android:inputType="number"
+        android:textSize="@dimen/texto_pts"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guideHorizontalSeccion3" />
+     <!--TITULO PREGUNTA 3-->
+    <TextView
+        android:id="@+id/tvSeccion3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_pequenio"
+        android:text="@string/selecciona_varias"
+        android:textColor="@color/colorAzulNeonContainer"
+        android:textSize="@dimen/texto_secciones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etPts3"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toEndOf="@id/etPts3"
+        app:layout_constraintTop_toTopOf="@id/etPts3" />
+    <!--PREGUNTA -->
+    <TextView
+        android:id="@+id/tvPregunta3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_pequenio"
+        android:text="@string/pregunta_arquitectura"
+        android:textSize="@dimen/texto_pregunta"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toBottomOf="@id/etPts3" />
+
+    <!-- 4 CHECKBOX -->
+    <!--CHECKBOX 1-->
+    <CheckBox
+        android:id="@+id/cbActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:text="@string/opcion_activity"
+        android:textSize="@dimen/texto_opcion"
+        app:layout_constraintEnd_toStartOf="@id/cbViewModel"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toBottomOf="@id/tvPregunta3" />
+    <!--CHECKBOX 2-->
+    <CheckBox
+        android:id="@+id/cbViewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:text="@string/opcion_viewmodel"
+        android:textSize="@dimen/texto_opcion"
+        app:layout_constraintEnd_toStartOf="@id/cbJavaScript"
+        app:layout_constraintStart_toEndOf="@id/cbActivity"
+        app:layout_constraintTop_toTopOf="@id/cbActivity" />
+    <!--CHECKBOX 3-->
+    <CheckBox
+        android:id="@+id/cbJavaScript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:text="@string/opcion_javascript"
+        android:textSize="@dimen/texto_opcion"
+        app:layout_constraintEnd_toStartOf="@id/cbRepository"
+        app:layout_constraintStart_toEndOf="@id/cbViewModel"
+        app:layout_constraintTop_toTopOf="@id/cbActivity" />
+    <!--CHECKBOX 4-->
+    <CheckBox
+        android:id="@+id/cbRepository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:text="@string/opcion_repository"
+        android:textSize="@dimen/texto_opcion"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toEndOf="@id/cbJavaScript"
+        app:layout_constraintTop_toTopOf="@id/cbActivity" />
+
+    <!-- ============ PREGUNTA 4 ============ -->
+    <!--Pts Antes del 4-->
+    <EditText
+        android:id="@+id/etPts4"
+        android:layout_width="@dimen/ancho_pts"
+        android:layout_height="wrap_content"
+        android:hint="@string/pts"
+        android:inputType="number"
+        android:textSize="@dimen/texto_pts"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guideHorizontalSeccion4" />
+<!--TITULO PREGUNTA 4-->
+    <TextView
+        android:id="@+id/tvSeccion4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_extraGrande"
+        android:text="@string/pregunta_desarrollo"
+        android:textColor="@color/colorAzulNeonContainer"
+        android:textSize="@dimen/texto_secciones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etPts4"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintTop_toTopOf="@id/etPts4" />
+<!--CAJA DE TEXTO (explica dependency injection)-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDesarrollo"
+        style="?attr/textInputOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margen_pequenio"
+        android:layout_marginBottom="@dimen/margen_medio"
+        android:hint="@string/explica"
+        app:layout_constraintBottom_toTopOf="@id/guideHozontalBoton"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toBottomOf="@id/etPts4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDesarrollo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ============ BOTÓN ENVIAR============ -->
+    <Button
+        android:id="@+id/botonEnviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_enviar"
+        android:textColor="@color/md_theme_onTertiary"
+        app:backgroundTint="@color/colorAzulNeonContainer"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalDerecha"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guideHozontalBoton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

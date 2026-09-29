@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\9.6.0\\com.example.practica1.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\9.6.0\\com.example.practica1.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.practica1.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.example.practica1.app-main-42:/layout/activity_main.xml"
+    }
+]

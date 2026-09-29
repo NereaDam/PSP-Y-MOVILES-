@@ -1,0 +1,8 @@
+com.example.practica1.app-pngs-0 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\build\generated\res\pngs\debug
+com.example.practica1.app-updated_navigation_xml-1 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\build\generated\updated_navigation_xml\debug
+com.example.practica1.app-packageDebugResources-2 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.practica1.app-packageDebugResources-3 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.practica1.app-debug-4 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.practica1.app-debug-5 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\src\debug\res
+com.example.practica1.app-main-6 D:\GitHubNerea\PSP-Y-MOVILES-\Moviles\practica1\app\src\main\res
+gradleHome-0 C:\Users\User\.gradle
